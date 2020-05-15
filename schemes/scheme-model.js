@@ -32,7 +32,7 @@ function findSteps(id) {
 //     -   Resolves to an array of all correctly ordered step for the given scheme: `[ { id: 17, scheme_name: 'Find the Holy Grail', step_number: 1, instructions: 'quest'}, { id: 18, scheme_name: 'Find the Holy Grail', step_number: 2, instructions: '...and quest'}, etc. ]`.
 //     -   This array should include the `scheme_name` _not_ the `scheme_id`.
 
-function add() {
+function add(scheme) {
     return db("schemes")
     .insert(scheme, "id")
     .then(ids => {
